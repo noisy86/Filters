@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://rawgit.com/moment/moment/2.27.0/min/moment.min.js"></script>
+  <script src="js/generation.js"></script>
+  <script src="js/sorting.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="filterContainer"></div>
+  <button id="sortingByExe" onclick="sortByExe();"> hide exe elements </button>
+  <button id="sortingByDate" onclick="sortByDate(this)">Sort By Date</button>
+  <div id="containerWrapper"></div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => { main() });
+</script>
+
+</html>
