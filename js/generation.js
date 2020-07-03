@@ -16,12 +16,12 @@ var dataMap = {
 
 // Generate start content(start page)
 function generationContent(block) {
-  for (var i = 0; i < dataArr.length; i++) {
+  for (var i=0; i<dataArr.length; i++) {
     var blocks = document.createElement('div');
     blocks.classList.add('container' + (i + 1));
     blocks.classList.add('container');
     block.appendChild(blocks);
-    for (var x = 0; x < dataArr[i].length; x++) {
+    for (var x=0; x<dataArr[i].length; x++) {
       var a = document.createElement('a');
       a.classList.add(dataType[x]);
       a.classList.add(dataType[x] + dataArr[i][x]);
@@ -39,7 +39,7 @@ function generationContent(block) {
 function checkboxByValue(checkboxId) {
   var checkName = ['fromLow', 'fromHigh'];
   var checkId = ['Lowest', 'Highest'];
-  for (var i = 0; i < 2; i++) {
+  for (var i=0; i<2; i++) {
     var checkByVal = document.createElement('input');
     checkByVal.type = 'checkbox';
     checkByVal.name = checkName[i];
@@ -58,7 +58,7 @@ function checkboxByValue(checkboxId) {
 function checkboxByTypes() {
   var checkName = ['hideExe', 'hideTxt', 'hideMp4'];
   var checkId = ['exe', 'txt', 'mp4'];
-  for (var i = 0; i < 3; i++) {
+  for (var i=0; i<3; i++) {
     var checkByType = document.createElement('input');
     checkByType.type = 'checkbox';
     checkByType.name = checkName[i];
@@ -77,7 +77,7 @@ function checkboxByTypes() {
 function checkboxByString() {
   var checkName = ['A-Z', 'Z-A'];
   var checkId = ['fromA', 'FromZ'];
-  for (var i = 0; i < 2; i++) {
+  for (var i=0; i<2; i++) {
     var checkByStr = document.createElement('input');
     checkByStr.type = 'checkbox';
     checkByStr.name = checkName[i];
@@ -93,7 +93,7 @@ function checkboxByString() {
 
 //Create tree for checkbox blocks
 function generationFilters(block) {
-  for (var i = 0; i < dataType.length; i++) {
+  for (var i=0; i<dataType.length; i++) {
     var ulList = document.createElement('ul');
     block.appendChild(ulList);
     ulList.id = dataType[i];
