@@ -23,9 +23,11 @@ function generationContent(block) {
     block.appendChild(blocks);
     for (var x=0; x<dataArr[i].length; x++) {
       var a = document.createElement('a');
-      a.classList.add(dataType[x]);
-      a.classList.add(dataType[x] + dataArr[i][x]);
-      a.classList.add(dataArr[i][x]);
+//      a.classList.add(dataType[x]);
+//      a.classList.add(dataType[x] + dataArr[i][x]);
+//      a.classList.add(dataArr[i][x]);
+      a.setAttribute('data-' + dataType[x], dataArr[i][x])
+      a.classList.add(dataType[x] + 'El')
       blocks.appendChild(a);
       a.innerHTML = dataArr[i][x];
     }
